@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #b80000;
+  --secondary-color: #005d8f;
+  --secondary-dark: #174872;
+  --blocks: #f1f1f1;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  /* min-height: 500px; */
+}

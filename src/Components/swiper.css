@@ -1,0 +1,78 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 30px;
+}
+
+/* .swiper-wrapper {
+  margin: auto;
+  width: 98%;
+} */
+
+.swipe-content {
+  /* border: 1px solid red; */
+  background: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  /* margin: 10px; */
+}
+
+.swiper-container {
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  margin: auto;
+  width: 80%;
+}
+
+.all-events {
+  margin: 10px;
+  padding: 10px;
+}
+
+.date-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blocks);
+  padding: 10px;
+}
+.day-date {
+  /* font-weight: bold; */
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.day {
+  padding: 10px;
+}
+.month-year {
+  margin: 10px;
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 10px; */
+}
+.month {
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.year {
+  /* padding: 10px; */
+  color: var(--primary-color);
+}
+
+.event-detail {
+  color: var(--primary-color);
+}

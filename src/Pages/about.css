@@ -1,0 +1,19 @@
+.about-wrapper {
+  padding-top: 200px;
+  width: 80%;
+  margin: auto;
+}
+
+.about-showcase {
+  background-color: var(--blocks);
+  height: 30vh;
+  position: relative;
+}
+
+.showcase-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}

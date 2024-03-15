@@ -1,0 +1,86 @@
+.header {
+  /* border: 1px solid red; */
+  /* margin: 10px; */
+  padding: 0px 30px 30px 30px;
+  overflow: hidden;
+  transition: 0.4s;
+  position: fixed;
+  top: 0px;
+  z-index: 10000;
+  width: 100%;
+  /* background-color: var(--blocks); */
+  /* height: 20vh; */
+  /* height: 100%; */
+  background: white;
+}
+
+.header-center {
+  width: 60%;
+  margin: auto;
+  /* border: 5px solid blue; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 15vh; */
+  padding: 0px 20px 20px 20px;
+}
+.left-header {
+  /* border: 1px solid red; */
+  flex: 1.5;
+}
+
+.left-header h1 {
+  text-align: center;
+}
+
+.right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  height: 100%;
+  flex: 3;
+  text-align: right;
+}
+
+.shortcut-header {
+  /* border: 10px solid red; */
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.shortcut-content {
+  display: flex;
+  justify-content: space-around;
+  justify-content: flex-end;
+  /* border: 5px solid purple; */
+  margin-right: 10px;
+  padding: 10px 0px 10px 10px;
+  background-color: var(--blocks);
+  /* color: white; */
+  width: 50%;
+}
+
+.quick-links {
+  padding: 10px;
+  font-size: 0.9rem;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+}
