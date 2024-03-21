@@ -1,0 +1,75 @@
+.profile-container {
+  /* border: 1px solid red; */
+  margin-left: 350px;
+  margin-right: 100px;
+  padding: 50px;
+
+  /* width: 1500px; */
+}
+
+.profile-content {
+  /* border: 5px solid red; */
+  width: 500px;
+  margin: auto;
+}
+
+.content-grp {
+  display: flex;
+  /* border: 1px solid green; */
+}
+
+.head,
+.value {
+  margin: 10px;
+  padding: 10px;
+}
+
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  /* border: 1px solid blue; */
+  margin: 10px;
+  padding: 10px;
+  /* color: white; */
+  color: var(--primary-color);
+  opacity: 0.7;
+}
+
+.content-grp {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.content-grp label {
+  margin-bottom: 5px;
+  font-size: 1.5em;
+  opacity: 0.7;
+}
+
+.content-grp input {
+  height: 30px;
+  width: 100%;
+  line-height: 1;
+  font-family: "Arial", sans-serif;
+  padding: 10px;
+}
+
+.edit-btn {
+  text-align: center;
+  background-color: var(--primary-color);
+  margin: 10px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,64 @@
+.modal-wrapper {
+  /* border: 10px solid green; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  /* width: 50vw; */
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-grp {
+  position: relative;
+  /* height: 80px;
+  padding: 10px; */
+  margin: 10px;
+}
+
+.modal-grp label {
+  margin-bottom: 5px;
+}
+
+.modal-grp input {
+  /* position: absoulte; */
+  width: 100%;
+  outline: none;
+  font-size: 1.2em;
+  padding: 0px 20px;
+  border: 1px solid var(--primary-color);
+  line-height: 40px;
+  border-radius: 5px;
+}
+
+.icons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.email-head {
+  /* position: absolute; */
+  /* top: 50px; */
+  /* left: -7px; */
+}
+
+.forgot-link {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot-link a {
+  padding: 10px;
+}
+
+.login-btn {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+}

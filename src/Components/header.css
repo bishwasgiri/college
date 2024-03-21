@@ -6,7 +6,7 @@
   transition: 0.4s;
   position: fixed;
   top: 0px;
-  z-index: 10000;
+  z-index: 1000;
   width: 100%;
   /* background-color: var(--blocks); */
   /* height: 20vh; */
@@ -84,3 +84,23 @@ nav ul li {
   margin: 10px;
   padding: 10px;
 }
+/* 
+#backdrop-root {
+  height: 100vh;
+  z-index: 8000;
+  background-color: black;
+  opacity: 0.6;
+  /* border: 1px solid blue; */
+/* position: fixed;
+  top: 0px;
+  left: 0px;
+}  */
+
+/* @keyframe backdrop-anime {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transformy: translateY(100%);
+  }
+} */
