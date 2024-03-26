@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -20,4 +20,8 @@ body {
   width: 80%;
   margin: auto;
   /* min-height: 500px; */
-}
+/* } */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

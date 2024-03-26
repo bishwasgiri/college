@@ -29,8 +29,6 @@
 }
 
 .swiper-container {
-  /* margin-left: auto; */
-  /* margin-right: auto; */
   margin: auto;
   width: 80%;
 }
@@ -38,41 +36,4 @@
 .all-events {
   margin: 10px;
   padding: 10px;
-}
-
-.date-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--blocks);
-  padding: 10px;
-}
-.day-date {
-  /* font-weight: bold; */
-  font-size: 3rem;
-  color: var(--primary-color);
-}
-
-.day {
-  padding: 10px;
-}
-.month-year {
-  margin: 10px;
-  /* padding: 10px; */
-  display: flex;
-  flex-direction: column;
-  /* margin-bottom: 10px; */
-}
-.month {
-  margin-bottom: 5px;
-  color: var(--primary-color);
-}
-
-.year {
-  /* padding: 10px; */
-  color: var(--primary-color);
-}
-
-.event-detail {
-  color: var(--primary-color);
 }

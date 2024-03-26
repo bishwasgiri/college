@@ -17,13 +17,21 @@ const Swipe = ({ slides }) => {
   const day = today.getDate();
 
   return (
-    <div className="swiper-wrapper">
+    <div className="">
       <Swiper
-        // install Swiper modules
-        // style={{ backgroundColor: "#f1f1f1" }}
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={1}
-        slidesPerView={3}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         navigation
         pagination={{ clickable: true }}
         className="swiper-container"
@@ -32,13 +40,13 @@ const Swipe = ({ slides }) => {
           <SwiperSlide key={slide.key}>
             <div className="swipe-content">
               <div className="all-events event-date">
-                <div className="date-content">
+                <div className="bg-secondary p-3 flex items-center">
                   <div className="day">
-                    <p className="day-date">{day}</p>
+                    <p className="text-primary text-4xl">{day}</p>
                   </div>
-                  <div className="month-year">
-                    <p className="month">{month}</p>
-                    <p className="year">{year}</p>
+                  <div className="flex flex-col items-center p-3">
+                    <p className="text-primary text-2xl">{month}</p>
+                    <p className="text-primary text-2xl">{year}</p>
                   </div>
                 </div>
               </div>

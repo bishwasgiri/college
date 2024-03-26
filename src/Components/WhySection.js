@@ -1,75 +1,128 @@
 import { useEffect, useState, useRef } from "react";
-
-import { FaBuildingColumns } from "react-icons/fa6";
-import { LiaAwardSolid } from "react-icons/lia";
-import { IoBookSharp } from "react-icons/io5";
+import { FiBookOpen } from "react-icons/fi";
+import { FaRegBuilding } from "react-icons/fa";
+import { BsAward } from "react-icons/bs";
+import Card from "../UI/Card";
 import ContentHeader from "../UI/ContentHeader";
-import "./why-section.css";
+
+import { motion } from "framer-motion";
+
+const slideBottom300 = {
+  hidden: {
+    opacity: 0,
+    y: "10px",
+  },
+  visible: {
+    opacity: 1,
+    y: "0",
+    transition: {
+      type: "spring", // Transition type
+      stiffness: 60,
+      delay: 0.2,
+      duration: 2,
+      ease: "easeIn",
+    },
+  },
+};
+
+const slideBottom500 = {
+  hidden: {
+    opacity: 0,
+    y: "10px",
+  },
+  visible: {
+    opacity: 1,
+    y: "0",
+    transition: {
+      type: "spring", // Transition type
+      stiffness: 60,
+      delay: 0.6,
+      duration: 2,
+      ease: "easeIn",
+    },
+  },
+};
+
+const slideBottom700 = {
+  hidden: {
+    opacity: 0,
+    y: "10px",
+  },
+  visible: {
+    opacity: 1,
+    y: "0",
+    transition: {
+      type: "spring", // Transition type
+      stiffness: 60,
+      delay: 1,
+      duration: 2,
+      ease: "easeIn",
+    },
+  },
+};
 
 const WhySection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const animateRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    ); // Trigger when 50% of the element is visible
-
-    if (animateRef.current) {
-      observer.observe(animateRef.current);
-    }
-
-    return () => {
-      if (animateRef.current) {
-        observer.unobserve(animateRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <div className="why-wrapper" ref={animateRef}>
+    <>
       <ContentHeader heading={"Why Choose SOT"} />
-      <div className={`card-container ${isVisible ? "animate" : ""}`}>
-        <div className="card">
-          <LiaAwardSolid style={{ fontSize: "7rem" }} />
-          <h3 className="cardContent-title">Affordability</h3>
-          <p className="cardContent">
-            Our college is government run college that makes us affordable for
-            every family throught country
-          </p>
+      <div className="w-4/5 mx-auto grid grid-cols-1  gap-5 md:grid-cols-2 lg:grid-cols-3 mt-20 mb-40 ">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={slideBottom300}
+          viewport={{ once: true }}
+        >
+          <Card>
+            <BsAward size={60} className="text-primary" />
+            <h3 className="p-5 text-3xl">Affordability</h3>
+            <p className="text-center text-2xl opacity-60">
+              Our college is government run college that makes us affordable for
+              every family throught country
+            </p>
+            <span className="mt-5 text-xl bg-primary text-white p-4">
+              Learn More
+            </span>
+          </Card>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={slideBottom500}
+          viewport={{ once: true }}
+        >
+          <Card>
+            <FaRegBuilding size={60} className="text-primary" />
+            <h3 className="p-5 text-3xl">Academics</h3>
+            <p className="text-center text-2xl opacity-60">
+              Our college is government run college that makes us affordable for
+              every family throught country
+            </p>
+            <span className="mt-5 text-xl bg-primary text-white p-4">
+              Learn More
+            </span>
+          </Card>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={slideBottom700}
+          viewport={{ once: true }}
+        >
+          <Card>
+            <FiBookOpen size={60} className="text-primary" />
+            <h3 className="p-5 text-3xl">Inspiring Student Life</h3>
+            <p className="text-center text-2xl opacity-60">
+              Our college is government run college that makes us affordable for
+              every family throught country
+            </p>
 
-          <span className="cardContent-btn">Learn More</span>
-        </div>
-        <div className="card">
-          <FaBuildingColumns style={{ fontSize: "7rem" }} />
-          <h3 className="cardContent-title">Academics</h3>
-          <p className="cardContent">
-            Our college is government run college that makes us affordable for
-            every family throught country
-          </p>
-
-          <span className="cardContent-btn">Learn More</span>
-        </div>
-        <div className="card">
-          <IoBookSharp style={{ fontSize: "7rem" }} />
-          <h3 className="cardContent-title">Inspiring Student Life</h3>
-          <p className="cardContent">
-            Our college is government run college that makes us affordable for
-            every family throught country
-          </p>
-
-          <span className="cardContent-btn">Learn More</span>
-        </div>
+            <span className="mt-5 text-xl bg-primary text-white p-4">
+              Learn More
+            </span>
+          </Card>
+        </motion.div>
       </div>
-    </div>
+    </>
   );
 };
 

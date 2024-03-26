@@ -1,6 +1,22 @@
 import ContentHeader from "../UI/ContentHeader";
 import Swiper from "./Swiper";
-import "./upcoming-event.css";
+import { motion } from "framer-motion";
+
+const slide = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      type: "spring",
+      stiffness: 60,
+      delay: 0.4,
+      duration: 0.4,
+      ease: "easeIn",
+    },
+  },
+};
 
 const UpcomingEvent = () => {
   const slides = [
@@ -12,10 +28,18 @@ const UpcomingEvent = () => {
     { key: "id6", content: "This is the sixth content" },
   ];
   return (
-    <div className="upcoming-wrapper">
+    <>
       <ContentHeader heading={"Upcoming Events"} />
-      <Swiper slides={slides} />
-    </div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={slide}
+        viewport={{ once: true }}
+        className="w-4/5 mx-auto bg-secondary mt-20 mb-40"
+      >
+        <Swiper slides={slides} />
+      </motion.div>
+    </>
   );
 };
 export default UpcomingEvent;

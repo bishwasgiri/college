@@ -1,9 +1,10 @@
 import React from "react";
 import BackDrop from "../UI/BackDrop";
 import ReactDOM from "react-dom";
-import { useLocation } from "react-router-dom";
 
-import "./login.css";
+import { useLocation } from "react-router-dom";
+import background from "../Assets/hero-image.jpg";
+// import "./login.css";
 
 const Login = () => {
   const location = useLocation();
@@ -11,8 +12,10 @@ const Login = () => {
 
   const isPathMatched = currentPath === "/staff/login";
   return (
-    <div className="login-container">
-      <h1>Login page</h1>
+    <div
+      className="bg-no-repeat bg-center bg-cover h-[100vh] z-10"
+      style={{ backgroundImage: `url(${background})` }}
+    >
       {isPathMatched &&
         ReactDOM.createPortal(
           <BackDrop />,
