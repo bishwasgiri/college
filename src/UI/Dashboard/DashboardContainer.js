@@ -1,7 +1,7 @@
 import React from "react";
-import "./dashBoardContainer.css";
+
 const DashboardContainer = (props) => {
-  return <div className="dash-wrapper">{props.children}</div>;
+  return <div className="ml-72 p-6">{props.children}</div>;
 };
 
 export default DashboardContainer;

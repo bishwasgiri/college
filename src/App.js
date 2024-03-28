@@ -4,8 +4,8 @@ import About from "./Pages/About";
 import Admissions from "./Pages/Admissions";
 import Contact from "./Pages/Contact";
 import Academics from "./Pages/Academics";
-import Profile from "./Pages/Profile";
-import Dashboard from "./Pages/Dashboard";
+import Profile from "./Pages/Dashboard/Profile";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login";
 
 const App = () => {
