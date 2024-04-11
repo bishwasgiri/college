@@ -32,7 +32,7 @@ const CampusDescription = () => {
 
   return (
     <>
-      <ContentHeader heading={"School of Technology"} />
+      <ContentHeader heading={"GMC School"} />
       <div className="w-4/5 mx-auto bg-secondary mt-20 mb-40 p-20">
         <div className="flex flex-col items-center">
           <p className="flex flex-col items-center">
