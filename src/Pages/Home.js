@@ -14,8 +14,8 @@ const Home = () => {
     <>
       <Headers />
       <HeroSection />
-      <Principal />
       <Chairman />
+      <Principal />
       <WhySection />
       <CampusDescription />
       <StudySection />

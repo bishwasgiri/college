@@ -98,6 +98,7 @@ const HeroSection = () => {
             src={backOne}
             alt="background"
             className="w-full h-full object-cover absolute top-0 left-0 "
+            loading="lazy"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -105,6 +106,7 @@ const HeroSection = () => {
             src={backTwo}
             alt="background"
             className="w-full h-full object-cover object-bottom absolute top-0 left-0"
+            loading="lazy"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -112,6 +114,7 @@ const HeroSection = () => {
             src={backThree}
             alt="background"
             className="w-full h-full object-cover absolute top-0 left-0"
+            loading="lazy"
           />
         </SwiperSlide>
 

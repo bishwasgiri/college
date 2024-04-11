@@ -65,7 +65,12 @@ const Headers = () => {
       </div>
       <nav className="flex justify-between md:justify-around items-center p-4 bg-primary h-4/5 f">
         <div className="w-20">
-          <img src={logo} alt="logo" className="w-full bg-white" />
+          <img
+            src={logo}
+            alt="logo"
+            className="w-full bg-white"
+            loading="lazy"
+          />
         </div>
         <ul className="hidden md:flex items-center">
           <motion.li className="" initial="initial" whileHover="hover">

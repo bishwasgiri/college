@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import principal from "../Assets/prince.jpg";
+import principal from "../Assets/avatar2.png";
 import ContentHeader from "../UI/ContentHeader";
 import "./principal.css";
 
@@ -36,13 +36,13 @@ const Principal = () => {
   return (
     <>
       <ContentHeader heading={"Principal Message"} />
-      <div className="w-4/5 mx-auto m-40 flex items-center flex-col md:flex-row md:justify-between mt-20 mb-40">
+      <div className="w-4/5 mx-auto mt-20 mb-40 flex items-center flex-col md:flex-row-reverse md:justify-between">
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={leftVariant}
           viewport={{ once: true }}
-          className="md:flex-2"
+          className="md:flex-3 w-[700px]"
         >
           <img
             className="w-full"
@@ -56,9 +56,9 @@ const Principal = () => {
           whileInView="visible"
           variants={rightVariant}
           viewport={{ once: true }}
-          className="p-10 md:flex-3"
+          className="p-10 md:flex-1"
         >
-          <blockquote className="up-quote block text-2xl p-3 opacity-60 text-justify leading-10 italic">
+          <blockquote className="up-quote text-2xl p-3 opacity-60 text-justify leading-10 italic">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
             non expedita beatae aperiam, labore magni dignissimos molestiae
             consequuntur quaerat deleniti omnis amet perspiciatis, tenetur
@@ -67,6 +67,9 @@ const Principal = () => {
             laborum enim, accusamus hic consequatur voluptatibus totam aut amet
             neque iste
           </blockquote>
+          <span className="text-2xl opacity-60 text-primary p-3 block text-end">
+            Shanta K.C
+          </span>
         </motion.div>
       </div>
     </>
