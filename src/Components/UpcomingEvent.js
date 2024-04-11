@@ -9,10 +9,10 @@ const slide = {
     y: 0,
 
     transition: {
-      type: "spring",
+      type: "tween",
       stiffness: 60,
-      delay: 0.4,
-      duration: 0.4,
+      delay: 0.2,
+      duration: 1,
       ease: "easeIn",
     },
   },

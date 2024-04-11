@@ -7,6 +7,7 @@ import StudySection from "../Components/StudySection";
 import UpcomingEvent from "../Components/UpcomingEvent";
 import Footer from "../Components/Footer";
 import Principal from "../Components/Principal";
+import Chairman from "../Components/Chairman";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Headers />
       <HeroSection />
       <Principal />
+      <Chairman />
       <WhySection />
       <CampusDescription />
       <StudySection />

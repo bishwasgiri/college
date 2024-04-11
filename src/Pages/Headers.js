@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
+// import { useContext } from "react";
+import AuthContext from "../Store/Auth-context";
+import logo from "../Assets/logos.png";
 
 const lineVariant = {
   initial: { opacity: 0, scaleX: 0 },
@@ -31,6 +34,8 @@ const linkHeaderVariant = {
 };
 
 const Headers = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user);
   return (
     <header className="h-[18vh] flex flex-col fixed top-0 left-0 right-0 bg-white z-50">
       <div className="flex justify-around h-1/5  p-2 m-2 md:p-1">
@@ -50,12 +55,18 @@ const Headers = () => {
             <Link to="/">Alumni</Link>
           </span>
           <span className="mr-3 p-5 text-primary cursor-pointer hover:text-black">
-            <Link to="/staff/login">Login</Link>
+            {!user ? (
+              <Link to="/staff/login">Login</Link>
+            ) : (
+              <Link to="/admin/dashboard">Dashboard</Link>
+            )}
           </span>
         </div>
       </div>
       <nav className="flex justify-between md:justify-around items-center p-4 bg-primary h-4/5 f">
-        <h1 className="text-white">School of Technology</h1>
+        <div className="w-20">
+          <img src={logo} alt="logo" className="w-full bg-white" />
+        </div>
         <ul className="hidden md:flex items-center">
           <motion.li className="" initial="initial" whileHover="hover">
             <Link className="text-white block relative" href="">

@@ -4,9 +4,11 @@ import About from "./Pages/About";
 import Admissions from "./Pages/Admissions";
 import Contact from "./Pages/Contact";
 import Academics from "./Pages/Academics";
-import Profile from "./Pages/Dashboard/Profile";
+// import Profile from "./Pages/Dashboard/Profile";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login";
+import SignUp from "./Pages/Signup";
+import ManageEvents from "./Pages/Dashboard/ManageEvents";
 
 const App = () => {
   return (
@@ -18,8 +20,10 @@ const App = () => {
         <Route path="/admissions" element={<Admissions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
-        <Route path="/admin/profile" element={<Profile />} />
+        {/* <Route path="/admin/profile" element={<Profile />} /> */}
         <Route path="/staff/login" element={<Login />} />
+        <Route path="/staff/signup" element={<SignUp />} />
+        <Route path="/staff/manage-events" element={<ManageEvents />} />
       </Routes>
     </BrowserRouter>
   );

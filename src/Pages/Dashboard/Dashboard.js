@@ -2,7 +2,6 @@ import React from "react";
 import Calendar from "react-calendar";
 import DashboardContainer from "../../UI/Dashboard/DashboardContainer";
 import DashBoardHeader from "../../UI/Dashboard/DashBoardHeader";
-// import "./dashboard.css";
 import "../../UI/Dashboard/calendar.css";
 
 const Dashboard = () => {

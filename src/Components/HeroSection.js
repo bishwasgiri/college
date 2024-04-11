@@ -1,5 +1,18 @@
-import heroImage from "../Assets/hero-image.jpg";
+// import heroImage from "../Assets/hero-image.jpg";
+import { useRef, useState } from "react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
+import backOne from "../Assets/back.jpg";
+import backTwo from "../Assets/back-two.jpg";
+import backThree from "../Assets/back-three.jpg";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "./hero-section.css";
 
 const firstVaraint = {
   initial: { opacity: 0, y: 10 },
@@ -56,12 +69,60 @@ const fourthVaraint = {
 };
 
 const HeroSection = () => {
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
+
   return (
-    <div className="mt-[18vh] relative">
-      <div
-        className="bg-no-repeat bg-center bg-cover h-[85vh] z-10 relative after:absolute after:content[''] after:w-full after:h-full after:top-0 after:left-0 after:bg-black  after:opacity-70"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      ></div>
+    <div className="mt-[18vh] w-full h-[81vh] relative">
+      <div className="bg-black w-full h-full absolute top-0 left-0 opacity-60 z-10"></div>
+      <Swiper
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={false}
+        modules={[Autoplay, Pagination, Navigation]}
+        onAutoplayTimeLeft={onAutoplayTimeLeft}
+        className="mySwiper w-full"
+      >
+        <SwiperSlide>
+          <img
+            src={backOne}
+            alt="background"
+            className="w-full h-full object-cover absolute top-0 left-0 "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={backTwo}
+            alt="background"
+            className="w-full h-full object-cover object-bottom absolute top-0 left-0"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={backThree}
+            alt="background"
+            className="w-full h-full object-cover absolute top-0 left-0"
+          />
+        </SwiperSlide>
+
+        <div className="autoplay-progress" slot="container-end">
+          <svg viewBox="0 0 48 48" ref={progressCircle}>
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span ref={progressContent}></span>
+        </div>
+      </Swiper>
+
       <div className="z-20 absolute top-[15vh] left-20 p-20 flex flex-col items-start">
         <motion.span
           initial="initial"
@@ -77,7 +138,7 @@ const HeroSection = () => {
           animate="animate"
           className="text-6xl mb-2 p-2 text-white block"
         >
-          School of Technology
+          Gaurishankar Multiple Campus
         </motion.span>
         <motion.span
           initial="initial"

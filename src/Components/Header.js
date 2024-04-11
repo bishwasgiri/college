@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 import BackDrop from "../UI/BackDrop";
 import Modal from "../UI/Modal";
+import logo from "../Assets/logo.jpg";
+
 import "./header.css";
 
 const Header = () => {
@@ -47,11 +49,8 @@ const Header = () => {
         }}
       >
         <div className="header-center">
-          <div className="left-header">
-            {/* <img src="" alt="" /> */}
-            <h1 style={{ fontSize: scrollPosition > 160 ? "25px" : "" }}>
-              School of Technology
-            </h1>
+          <div className="w-[300px]">
+            <img src={logo} alt="logo" className="w-full" />
           </div>
           <div className="right-header">
             {/* {scrollPosition > 80? } */}

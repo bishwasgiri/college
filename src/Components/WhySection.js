@@ -64,7 +64,7 @@ const slideBottom700 = {
 const WhySection = () => {
   return (
     <>
-      <ContentHeader heading={"Why Choose SOT"} />
+      <ContentHeader heading={"Why Choose GMC"} />
       <div className="w-4/5 mx-auto grid grid-cols-1  gap-5 md:grid-cols-2 lg:grid-cols-3 mt-20 mb-40 ">
         <motion.div
           initial="hidden"

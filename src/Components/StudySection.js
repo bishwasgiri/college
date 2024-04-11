@@ -11,7 +11,7 @@ const slideAbove = {
     y: 0,
     type: "tween",
     transition: {
-      delay: 0.4,
+      delay: 0.2,
       duration: 1,
       ease: "easeIn",
     },
@@ -21,7 +21,7 @@ const slideAbove = {
 const StudySection = () => {
   return (
     <>
-      <ContentHeader heading={"Study at SOT"} />
+      <ContentHeader heading={"Study at GMC"} />
       <motion.div
         initial="hidden"
         whileInView="visible"

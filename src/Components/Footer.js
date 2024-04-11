@@ -6,12 +6,12 @@ const Footer = () => {
       <footer className="flex justify-around md:items-center text-white opacity-60">
         <div className=" flex-1 flex flex-col items-center md:items-start">
           <div className="flex flex-col mb-3">
-            <span className="text-3xl">School of Technology</span>
+            <span className="text-3xl">Gaurishankar Multiple Campus</span>
             <span className="text-2xl">Since 1980</span>
           </div>
           <div className="text-xl">
             <p className="text-xl mb-3">
-              SOT transforms lives through acessible, student centered,high
+              GMC transforms lives through acessible, student centered,high
               quality education
             </p>
           </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import principal from "../Assets/prince.jpg";
 import ContentHeader from "../UI/ContentHeader";
+import "./principal.css";
 
 const leftVariant = {
   hidden: { opacity: 0, x: -10 },
@@ -43,7 +44,12 @@ const Principal = () => {
           viewport={{ once: true }}
           className="md:flex-2"
         >
-          <img className="w-full" src={principal} alt="principal" />
+          <img
+            className="w-full"
+            src={principal}
+            alt="principal"
+            loading="lazy"
+          />
         </motion.div>
         <motion.div
           initial="hidden"
@@ -52,7 +58,7 @@ const Principal = () => {
           viewport={{ once: true }}
           className="p-10 md:flex-3"
         >
-          <span className="inline-block text-2xl p-3">
+          <blockquote className="up-quote block text-2xl p-3 opacity-60 text-justify leading-10 italic">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
             non expedita beatae aperiam, labore magni dignissimos molestiae
             consequuntur quaerat deleniti omnis amet perspiciatis, tenetur
@@ -60,7 +66,7 @@ const Principal = () => {
             eius voluptatem ipsum ullam distinctio dolor pariatur deleniti
             laborum enim, accusamus hic consequatur voluptatibus totam aut amet
             neque iste
-          </span>
+          </blockquote>
         </motion.div>
       </div>
     </>
