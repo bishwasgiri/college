@@ -42,13 +42,13 @@ const Principal = () => {
           whileInView="visible"
           variants={leftVariant}
           viewport={{ once: true }}
-          className="md:flex-3 w-[700px]"
+          className="md:flex-3 h-[70vh] overflow-hidden "
         >
           <img
-            className="w-full"
+            className="w-full h-auto object-cover"
             src={principal}
             alt="principal"
-            loading="lazy"
+            // loading="lazy"
           />
         </motion.div>
         <motion.div
