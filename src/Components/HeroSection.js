@@ -15,13 +15,13 @@ import "swiper/css/navigation";
 import "./hero-section.css";
 
 const firstVaraint = {
-  initial: { opacity: 0, y: 10 },
+  initial: { opacity: 0, y: 50 },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
       delay: 0.2,
-      duration: 0.4,
+      duration: 0.8,
       type: "tween",
       ease: "easeInOut",
     },
@@ -29,39 +29,40 @@ const firstVaraint = {
 };
 
 const secondVaraint = {
-  initial: { opacity: 0, y: 10 },
+  initial: { opacity: 0, y: 50 },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
       delay: 0.6,
-      duration: 0.4,
+      duration: 0.8,
       type: "tween",
       ease: "easeInOut",
     },
   },
 };
 const thirdVaraint = {
-  initial: { opacity: 0, y: 10 },
+  initial: { opacity: 0, y: 50 },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
       delay: 1,
-      duration: 0.4,
+      duration: 0.8,
       type: "tween",
       ease: "easeInOut",
     },
   },
 };
+
 const fourthVaraint = {
-  initial: { opacity: 0, y: 10 },
+  initial: { opacity: 0, y: 50 },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
       delay: 1.4,
-      duration: 0.4,
+      duration: 0.8,
       type: "tween",
       ease: "easeInOut",
     },
@@ -155,7 +156,7 @@ const HeroSection = () => {
           initial="initial"
           variants={fourthVaraint}
           animate="animate"
-          className="text-xl p-4 block bg-primary text-white cursor-pointer w-1/5 text-center "
+          className="text-xl p-3 block bg-primary text-white cursor-pointer"
         >
           Learn More
         </motion.span>

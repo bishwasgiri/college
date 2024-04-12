@@ -3,17 +3,16 @@ import Swiper from "./Swiper";
 import { motion } from "framer-motion";
 
 const slide = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
 
     transition: {
       type: "tween",
-      stiffness: 60,
-      delay: 0.2,
-      duration: 1,
-      ease: "easeIn",
+      delay: 0.4,
+      duration: 0.8,
+      ease: "easeInOut",
     },
   },
 };

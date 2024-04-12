@@ -5,29 +5,29 @@ import ContentHeader from "../UI/ContentHeader";
 import "./principal.css";
 
 const leftVariant = {
-  hidden: { opacity: 0, x: -10 },
+  hidden: { opacity: 0, x: -100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "tween",
+      delay: 0.4,
+      duration: 0.8,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const rightVariant = {
+  hidden: { opacity: 0, x: 100 },
   visible: {
     opacity: 1,
     x: 0,
     transition: {
       type: "tween",
       delay: 0.2,
-      duration: 1,
-      ease: "easeIn",
-    },
-  },
-};
-
-const rightVariant = {
-  hidden: { opacity: 0, x: 10 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "tween",
-      delay: 0.3,
-      duration: 1,
-      ease: "easeIn",
+      duration: 0.8,
+      ease: "easeInOut",
     },
   },
 };

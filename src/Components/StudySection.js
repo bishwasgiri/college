@@ -5,15 +5,16 @@ import ContentHeader from "../UI/ContentHeader";
 import { motion } from "framer-motion";
 
 const slideAbove = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
-    type: "tween",
+
     transition: {
-      delay: 0.2,
-      duration: 1,
-      ease: "easeIn",
+      type: "tween",
+      delay: 0.6,
+      duration: 0.6,
+      ease: "easeInOut",
     },
   },
 };

@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
 
 const slideUp = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
-    type: "tween",
+
     transition: {
+      type: "tween",
       delay: 0.2,
-      duration: 1,
-      ease: "easeIn",
+      duration: 0.4,
+      ease: "easeInOut",
     },
   },
 };

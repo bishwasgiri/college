@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
-// import { useContext } from "react";
+import { IoMailOutline } from "react-icons/io5";
+import { PiPhoneCallLight } from "react-icons/pi";
 import AuthContext from "../Store/Auth-context";
 import logo from "../Assets/logos.png";
 
@@ -39,12 +40,14 @@ const Headers = () => {
   return (
     <header className="h-[18vh] flex flex-col fixed top-0 left-0 right-0 bg-white z-50">
       <div className="flex justify-around h-1/5  p-2 m-2 md:p-1">
-        <div className="left">
-          <span className="mr-3 p-5 text-primary cursor-pointer hover:text-black">
-            +977908103562
+        <div className="flex justify-between items-center">
+          <span className="mr-2 p-2 text-primary cursor-pointer hover:text-black flex justify-between items-center ">
+            <PiPhoneCallLight />
+            <span className="ml-1">+977908103562</span>
           </span>
-          <span className="mr-3 p-5 text-primary cursor-pointer hover:text-black">
-            demo@gmail.com
+          <span className="mr-2 p-2 text-primary cursor-pointer hover:text-black flex justify-between items-center ">
+            <IoMailOutline />
+            <span className="ml-1">gaurishanakar@gmail.com</span>
           </span>
         </div>
         <div className="right">
