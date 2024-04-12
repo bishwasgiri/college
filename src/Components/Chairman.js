@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import principal from "../Assets/avatar1.png";
+import principal from "../Assets/chairman.jpg";
 import ContentHeader from "../UI/ContentHeader";
 import "./principal.css";
 
