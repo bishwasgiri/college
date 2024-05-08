@@ -18,11 +18,14 @@ const LoginForm = () => {
 
     console.log(userEmail, userPassword);
 
-    const response = await fetch("http://localhost:5000/api/admin/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: userEmail, password: userPassword }),
-    });
+    const response = await fetch(
+      "https://college-backend-pxbb.onrender.com/api/admin/login",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: userEmail, password: userPassword }),
+      }
+    );
 
     const json = await response.json();
 
