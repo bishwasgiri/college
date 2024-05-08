@@ -42,13 +42,12 @@ const Principal = () => {
           whileInView="visible"
           variants={leftVariant}
           viewport={{ once: true }}
-          className="md:flex-3 h-[70vh] overflow-hidden "
+          className="flex-1 h-[70vh] overflow-hidden "
         >
           <img
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover object-top"
             src={principal}
             alt="principal"
-            // loading="lazy"
           />
         </motion.div>
         <motion.div
@@ -58,7 +57,7 @@ const Principal = () => {
           viewport={{ once: true }}
           className="p-10 md:flex-1"
         >
-          <blockquote className="up-quote text-2xl p-3 opacity-60 text-justify leading-10 italic">
+          <blockquote className="up-quote text-2xl p-3 opacity-60 text-justify leading-10 italic font-light tracking-wide">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
             non expedita beatae aperiam, labore magni dignissimos molestiae
             consequuntur quaerat deleniti omnis amet perspiciatis, tenetur

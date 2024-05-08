@@ -4,7 +4,6 @@ import { FaRegBuilding } from "react-icons/fa";
 import { BsAward } from "react-icons/bs";
 import Card from "../UI/Card";
 import ContentHeader from "../UI/ContentHeader";
-
 import { motion } from "framer-motion";
 
 const slideBottom300 = {
@@ -74,12 +73,14 @@ const WhySection = () => {
         >
           <Card>
             <BsAward size={60} className="text-primary" />
-            <h3 className="p-5 text-3xl">Affordability</h3>
-            <p className="text-center text-2xl opacity-60">
+            <h3 className="p-5 text-3xl tracking-wider font-light">
+              Affordability
+            </h3>
+            <p className="text-center text-2xl opacity-60 tracking-wider font-light">
               Our college is government run college that makes us affordable for
               every family throught country
             </p>
-            <span className="mt-5 text-xl bg-primary text-white p-4">
+            <span className="mt-5 text-xl bg-primary text-white p-4 tracking-wider">
               Learn More
             </span>
           </Card>
@@ -92,12 +93,14 @@ const WhySection = () => {
         >
           <Card>
             <FaRegBuilding size={60} className="text-primary" />
-            <h3 className="p-5 text-3xl">Academics</h3>
-            <p className="text-center text-2xl opacity-60">
+            <h3 className="p-5 text-3xl tracking-wider font-light">
+              Academics
+            </h3>
+            <p className="text-center text-2xl opacity-60 tracking-wider font-light">
               Our college is government run college that makes us affordable for
               every family throught country
             </p>
-            <span className="mt-5 text-xl bg-primary text-white p-4">
+            <span className="mt-5 text-xl bg-primary text-white p-4 tracking-wider">
               Learn More
             </span>
           </Card>
@@ -110,13 +113,15 @@ const WhySection = () => {
         >
           <Card>
             <FiBookOpen size={60} className="text-primary" />
-            <h3 className="p-5 text-3xl">Inspiring Student Life</h3>
-            <p className="text-center text-2xl opacity-60">
+            <h3 className="p-5 text-3xl tracking-wider font-light">
+              Inspiring Student Life
+            </h3>
+            <p className="text-center text-2xl opacity-60 tracking-wider font-light">
               Our college is government run college that makes us affordable for
               every family throught country
             </p>
 
-            <span className="mt-5 text-xl bg-primary text-white p-4">
+            <span className="mt-5 text-xl bg-primary text-white p-4 tracking wider">
               Learn More
             </span>
           </Card>

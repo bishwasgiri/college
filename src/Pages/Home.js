@@ -8,6 +8,8 @@ import UpcomingEvent from "../Components/UpcomingEvent";
 import Footer from "../Components/Footer";
 import Principal from "../Components/Principal";
 import Chairman from "../Components/Chairman";
+import Testimonials from "../Components/Home/Testimonials";
+import Faq from "../Components/Home/Faq";
 
 const Home = () => {
   return (
@@ -20,6 +22,8 @@ const Home = () => {
       <CampusDescription />
       <StudySection />
       <UpcomingEvent />
+      <Testimonials />
+      <Faq />
       <Footer />
     </>
   );

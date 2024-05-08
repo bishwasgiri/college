@@ -44,7 +44,7 @@ const LoginForm = () => {
       <form className="flex flex-col items-center" onSubmit={handleSubmit}>
         <div className="flex flex-col items-center">
           <h1 className="mb-5 text-3xl text-primary">Admin Login</h1>
-          <span>username: admin</span>
+          <span>email: admin@gmail.com</span>
           <div className="m-3 relative">
             <div className="absolute right-3 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <RiUserLine />
@@ -60,7 +60,7 @@ const LoginForm = () => {
               value={userEmail}
             />
           </div>
-          <span>password: admin123</span>
+          <span>password: admin</span>
           <div className="m-3 relative">
             <div className="absolute right-3 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <PiLockKey />

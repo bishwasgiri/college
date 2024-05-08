@@ -42,14 +42,12 @@ const Chairman = () => {
           whileInView="visible"
           variants={leftVariant}
           viewport={{ once: true }}
-          // className=""
-          className="md:flex-3 h-[70vh] overflow-hidden "
+          className="flex-1  h-[70vh] overflow-hidden"
         >
           <img
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover object-top"
             src={principal}
             alt="principal"
-            // loading="lazy"
           />
         </motion.div>
         <motion.div
@@ -57,9 +55,9 @@ const Chairman = () => {
           whileInView="visible"
           variants={rightVariant}
           viewport={{ once: true }}
-          className="p-10 md:flex-1"
+          className="flex-1 p-10 md:flex-1"
         >
-          <blockquote className="up-quote inline-block text-2xl p-3 text-justify opacity-60 leading-10">
+          <blockquote className="up-quote inline-block text-2xl p-3 text-justify opacity-60 tracking-wide font-light italic leading-10">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
             non expedita beatae aperiam, labore magni dignissimos molestiae
             consequuntur quaerat deleniti omnis amet perspiciatis, tenetur

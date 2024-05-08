@@ -13,6 +13,8 @@ module.exports = {
       height: {
         500: "500px",
       },
+      backgroundColor: ["active"],
+      textColor: ["active"],
     },
   },
   plugins: [],

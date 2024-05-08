@@ -1,6 +1,7 @@
 import ContentHeader from "../UI/ContentHeader";
-import Swiper from "./Swiper";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Swipe from "./Swiper";
 
 const slide = {
   hidden: { opacity: 0, y: 50 },
@@ -18,14 +19,31 @@ const slide = {
 };
 
 const UpcomingEvent = () => {
-  const slides = [
-    { key: "id1", content: "This is the first content" },
-    { key: "id2", content: "This is the second content" },
-    { key: "id3", content: "This is the third content" },
-    { key: "id4", content: "This is the fourth content" },
-    { key: "id5", content: "This is the fifth content" },
-    { key: "id6", content: "This is the sixth content" },
-  ];
+  const [slides, setSlides] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch(
+          "https://college-backend-pxbb.onrender.com/api/event/events",
+          {
+            method: "GET",
+
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await response.json();
+        setSlides(data);
+      } catch (error) {
+        console.log("error fetching posts:", error);
+      }
+    };
+
+    fetchPosts();
+  }, [slides]);
+
   return (
     <>
       <ContentHeader heading={"Upcoming Events"} />
@@ -36,7 +54,7 @@ const UpcomingEvent = () => {
         viewport={{ once: true }}
         className="w-4/5 mx-auto bg-secondary mt-20 mb-40"
       >
-        <Swiper slides={slides} />
+        <Swipe slides={slides} />
       </motion.div>
     </>
   );

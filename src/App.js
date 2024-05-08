@@ -9,6 +9,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/Signup";
 import ManageEvents from "./Pages/Dashboard/ManageEvents";
+import ManageNotice from "./Pages/Dashboard/ManageNotice";
 
 const App = () => {
   return (
@@ -23,7 +24,10 @@ const App = () => {
         {/* <Route path="/admin/profile" element={<Profile />} /> */}
         <Route path="/staff/login" element={<Login />} />
         <Route path="/staff/signup" element={<SignUp />} />
-        <Route path="/staff/manage-events" element={<ManageEvents />} />
+        {/* <Route path="/admin/user-alumni" element={<ManageEvents />} /> */}
+        {/* <Route path="/admin/user-teachers" element={<ManageEvents />} /> */}
+        <Route path="/admin/manage-events" element={<ManageEvents />} />
+        <Route path="/admin/manage-notice" element={<ManageNotice />} />
       </Routes>
     </BrowserRouter>
   );

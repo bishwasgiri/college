@@ -37,33 +37,37 @@ const Swipe = ({ slides }) => {
         className="swiper-container"
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.key}>
+          <SwiperSlide key={slide._id}>
             <div className="swipe-content">
               <div className="all-events event-date">
-                <div className="bg-secondary p-3 flex items-center">
+                <div className="bg-secondary p-4 flex items-center">
                   <div className="day">
-                    <p className="text-primary text-4xl">{day}</p>
+                    <p className="text-primary text-5xl">
+                      {new Date(slide.date).getDate()}
+                    </p>
                   </div>
                   <div className="flex flex-col items-center p-3">
-                    <p className="text-primary text-2xl">{month}</p>
-                    <p className="text-primary text-2xl">{year}</p>
+                    <p className="text-primary text-3xl tracking-wide">
+                      {new Date(slide.date).toLocaleString("default", {
+                        month: "long",
+                      })}
+                    </p>
+                    <p className="text-primary text-2xl tracking-wide">
+                      {new Date(slide.date).getFullYear()}
+                    </p>
                   </div>
                 </div>
               </div>
               <div className="all-events">
-                <span className="event-heading">Arts and Culture</span>
-              </div>
-              <div className="all-events">
-                <h3 className="event-desc">Dance Practise For Parents Day</h3>
-              </div>
-              <div className="all-events">
-                <span>
-                  <a href="#" className="event-detail">
-                    Find out more
-                  </a>
+                <span className="opacity-60 text-2xl tracking-wide">
+                  {slide.heading}
                 </span>
               </div>
-              {/* < */}
+              <div className="all-events">
+                <h3 className="opacity-60 text-xl italic tracking-wide">
+                  {slide.description}
+                </h3>
+              </div>
             </div>
           </SwiperSlide>
         ))}
