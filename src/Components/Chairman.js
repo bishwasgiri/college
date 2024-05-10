@@ -36,7 +36,7 @@ const Chairman = () => {
   return (
     <>
       <ContentHeader heading={"Chairman Message"} />
-      <div className="w-4/5 mx-auto mt-20 mb-40 flex  items-center flex-col md:flex-row md:justify-between ">
+      <div className="w-4/5 mx-auto mt-20 mb-40 flex  items-center flex-col md:flex-row md:justify-between bg-custom-pr ">
         <motion.div
           initial="hidden"
           whileInView="visible"

@@ -37,7 +37,11 @@ const UpcomingEvent = () => {
         );
         if (response.ok) {
           const data = await response.json();
-          setSlides(data);
+          if (data) {
+            setSlides(data);
+            setIsLoading(true);
+          }
+
           setIsLoading(false);
         }
         if (!response.ok) {

@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./swiper.css";
-import ContentHeader from "../UI/ContentHeader";
 
 const Swipe = ({ slides }) => {
   const today = new Date();
