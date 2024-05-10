@@ -20,9 +20,11 @@ const slide = {
 
 const UpcomingEvent = () => {
   const [slides, setSlides] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // setIsLoading(true);
+
     const fetchPosts = async () => {
       try {
         const response = await fetch(
@@ -35,23 +37,19 @@ const UpcomingEvent = () => {
             },
           }
         );
+
         if (response.ok) {
           const data = await response.json();
-          // console.log("the data after response is ", data);
 
           if (data) {
             setSlides(data);
             setIsLoading(false);
-          } else {
-            setIsLoading(true);
           }
         }
-        if (!response.ok) {
-          setIsLoading(true);
-        }
+        setIsLoading(false);
       } catch (error) {
         console.log("error fetching posts:", error);
-        setIsLoading(true);
+        setIsLoading(false);
       }
     };
 
