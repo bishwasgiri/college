@@ -41,9 +41,9 @@ const UpcomingEvent = () => {
 
           if (data) {
             setSlides(data);
-            setIsLoading(true);
-          } else {
             setIsLoading(false);
+          } else {
+            setIsLoading(true);
           }
         }
         if (!response.ok) {
