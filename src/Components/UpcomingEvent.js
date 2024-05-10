@@ -37,18 +37,21 @@ const UpcomingEvent = () => {
         );
         if (response.ok) {
           const data = await response.json();
+          // console.log("the data after response is ", data);
+
           if (data) {
             setSlides(data);
             setIsLoading(true);
+          } else {
+            setIsLoading(false);
           }
-
-          setIsLoading(false);
         }
         if (!response.ok) {
           setIsLoading(true);
         }
       } catch (error) {
         console.log("error fetching posts:", error);
+        setIsLoading(true);
       }
     };
 
@@ -71,9 +74,9 @@ const UpcomingEvent = () => {
             <path
               d="M4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4"
               stroke="#641320"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="4"
             />
           </svg>
         </div>
