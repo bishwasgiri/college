@@ -63,41 +63,41 @@ const Testimonials = () => {
   return (
     <>
       <ContentHeader heading={"Testimonials"} />
-      <div className="w-4/5 mx-auto mt-20 mb-40">
-        <div className="flex items-center justify-between space-x-20">
+      <div className="w-full p-2 md:w-4/5 mx-auto mt-20 mb-40">
+        <div className="flex flex-col items-center lg:flex-row lg:space-x-24">
           <motion.div
             initial="hidden"
             whileInView="visible"
             variants={leftVariant}
             viewport={{ once: true }}
-            className="flex flex-col items-start justify-center space-y-8"
+            className="flex flex-col items-center justify-center space-y-4  lg:items-start md:space-y-8"
           >
-            <span className="flex flex-col items-start font-medium">
-              <span className="text-4xl text-primary">
+            <span className="flex flex-col items-center md:items-start font-medium ">
+              <span className="text-4xl text-primary block text-center lg:text-start">
                 Read what our students
               </span>
-              <span className="text-4xl text-primary">Say about us</span>
+              <span className="text-4xl text-primary block">Say about us</span>
             </span>
-            <span className="text-2xl opacity-65 font-light">
+            <span className="text-2xl opacity-65 font-light block">
               We have over 1000+ alumni
             </span>
-            <span className="text-2xl opacity-65 font-light">
+            <span className="text-2xl opacity-65 font-light block text-center lg:text-start">
               They are working on various prestigious organization
             </span>
           </motion.div>
 
-          <div className="flex flex-col items-center justify-center ">
+          <div className="flex flex-col items-end justify-center w-ful">
             <motion.div
               initial="hidden"
               whileInView="visible"
               variants={firstVariant}
               viewport={{ once: true }}
-              className="flex items-center justify-between space-x-4 rounded shadow-xl p-10"
+              className="flex flex-col items-center justify-between lg:flex-row space-x-4 rounded shadow-xl p-10"
             >
               <div className="w-20 h-20">
                 <img
                   src={avatar}
-                  alt=""
+                  alt="avatar"
                   className="object-cover w-full h-full rounded-full"
                 />
               </div>
@@ -118,12 +118,12 @@ const Testimonials = () => {
               whileInView="visible"
               variants={secondVariant}
               viewport={{ once: true }}
-              className="flex items-center justify-between space-x-4 rounded shadow-xl p-10"
+              className="flex flex-col items-center justify-between lg:flex-row space-x-4 rounded shadow-xl p-10"
             >
               <div className="w-20 h-20">
                 <img
                   src={avatar}
-                  alt=""
+                  alt="avatar"
                   className="object-cover w-full h-full rounded-full"
                 />
               </div>
@@ -144,12 +144,12 @@ const Testimonials = () => {
               whileInView="visible"
               variants={thirdVariant}
               viewport={{ once: true }}
-              className="flex items-center justify-between space-x-4 rounded shadow-xl p-10"
+              className="flex flex-col items-center justify-between lg:flex-row space-x-4 rounded shadow-xl p-10"
             >
               <div className="w-20 h-20">
                 <img
                   src={avatar}
-                  alt=""
+                  alt="avatar"
                   className="object-cover w-full h-full rounded-full"
                 />
               </div>

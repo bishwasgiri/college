@@ -33,7 +33,7 @@ const CampusDescription = () => {
   return (
     <>
       <ContentHeader heading={"GMC School"} />
-      <div className="w-4/5 mx-auto bg-secondary mt-20 mb-40 p-20">
+      <div className="w-full md:w-4/5 mx-auto bg-secondary mt-20 mb-40 p-20">
         <div className="flex flex-col items-center">
           <p className="flex flex-col items-center">
             <span className="text-2xl inline-block m-1 p-1 opacity-60 font-light tracking-wide text-center">
@@ -42,7 +42,10 @@ const CampusDescription = () => {
               positive impact on the world
             </span>
           </p>
-          <div className="flex m-1 p-1" ref={countUpRef}>
+          <div
+            className="flex flex-col items-center md:flex-row m-1 p-1"
+            ref={countUpRef}
+          >
             <div className=" flex flex-col items-center m-3 p-3 text-primary  text-4xl">
               {isVisible && <CountUp end={1000} duration={2} />}
 

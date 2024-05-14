@@ -25,7 +25,9 @@ const ContentHeader = (props) => {
         viewport={{ once: true }}
         className="w-4/5 mx-auto flex flex-col items-center mt-40"
       >
-        <h1 className="text-3xl text-primary tracking-wide">{props.heading}</h1>
+        <h1 className="text-3xl text-primary tracking-wide text-center">
+          {props.heading}
+        </h1>
         <div className="mt-2 h-1 w-10 bg-primary"></div>
       </motion.div>
     </>

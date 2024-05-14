@@ -60,7 +60,7 @@ const UpcomingEvent = () => {
     <>
       <ContentHeader heading={"Upcoming Events"} />
       {isLoading ? (
-        <div className="w-4/5 mx-auto flex flex-col items-center mt-5">
+        <div className="w-full md:w-4/5 mx-auto flex flex-col items-center mt-5">
           <svg
             className="animate-spin"
             fill="none"

@@ -31,22 +31,22 @@ const StudySection = () => {
         className="w-4/5 mx-auto mt-20 mb-40"
       >
         <p className="flex flex-col items-center">
-          <span className="text-2xl m-1 p-1 opacity-60 font-light tracking-wide md:text-center">
+          <span className="text-2xl m-1 p-1 opacity-60 font-light tracking-wide text-center">
             Whether you're considering foundation course or an undergraduate
             degree or master's,
           </span>
-          <span className="text-2xl m-1 p-1 opacity-60 font-light tracking-wide">
+          <span className="text-2xl m-1 p-1 opacity-60 font-light tracking-wide text-center">
             GMC is a place where students thrive
           </span>
         </p>
-        <div className=" grid  grid-cols-1 gap-10 m-10  md:grid-cols-2 lg:grid-cols-3">
-          <div className="w-800 overflow-hidden relative group">
+        <div className=" grid  grid-cols-1 gap-10  lg:grid-cols-3">
+          <div className="w-600 overflow-hidden relative group">
             <img
               className="w-full transition-transform duration-300 ease-in-out group-hover:scale-125 cursor-pointer"
               src={courseone}
               alt="course"
             />
-            <span className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 bg-primary text-white  cursor-pointer p-4 tracking-wide">
+            <span className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 bg-primary text-white  cursor-pointer p-4 tracking-wide ">
               High School
             </span>
           </div>
@@ -60,7 +60,7 @@ const StudySection = () => {
               Bachelor's
             </span>
           </div>
-          <div className="w-[600] overflow-hidden relative group">
+          <div className="w-600 overflow-hidden relative group">
             <img
               className="w-full transition-transform duration-300 ease-in-out group-hover:scale-125 cursor-pointer"
               src={coursethree}

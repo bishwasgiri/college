@@ -3,6 +3,16 @@ module.exports = {
   content: ["./src/**/*.js"],
   theme: {
     extend: {
+      screens: {
+        sm: "480px",
+        md: "768px",
+        lg: "1020px",
+        xl: "1440px",
+      },
+      fontFamily: {
+        sans: ["Rubik", "sans-serif"],
+      },
+
       colors: {
         primary: "#641320",
         secondary: "#f1f1f1",

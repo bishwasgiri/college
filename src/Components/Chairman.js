@@ -36,7 +36,7 @@ const Chairman = () => {
   return (
     <>
       <ContentHeader heading={"Chairman Message"} />
-      <div className="w-4/5 mx-auto mt-20 mb-40 flex  items-center flex-col md:flex-row md:justify-between bg-custom-pr ">
+      <div className="w-4/5 mx-auto mt-20 mb-40 flex  items-center flex-col lg:flex-row lg:justify-between bg-custom-pr ">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -55,7 +55,7 @@ const Chairman = () => {
           whileInView="visible"
           variants={rightVariant}
           viewport={{ once: true }}
-          className="flex-1 p-10 md:flex-1"
+          className="flex-1 p-10 lg:flex-1"
         >
           <blockquote className="up-quote inline-block text-2xl p-3 text-justify opacity-60 tracking-wide font-light italic leading-10">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat

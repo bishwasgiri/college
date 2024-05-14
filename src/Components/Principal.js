@@ -36,7 +36,7 @@ const Principal = () => {
   return (
     <>
       <ContentHeader heading={"Principal Message"} />
-      <div className="w-4/5 mx-auto mt-20 mb-40 flex items-center flex-col md:flex-row-reverse md:justify-between">
+      <div className="w-4/5 mx-auto mt-20 mb-40 flex items-center flex-col lg:flex-row-reverse lg:justify-between">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -55,7 +55,7 @@ const Principal = () => {
           whileInView="visible"
           variants={rightVariant}
           viewport={{ once: true }}
-          className="p-10 md:flex-1"
+          className="p-10 lg:flex-1"
         >
           <blockquote className="up-quote text-2xl p-3 opacity-60 text-justify leading-10 italic font-light tracking-wide">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat

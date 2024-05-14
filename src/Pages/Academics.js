@@ -1,9 +1,9 @@
-import Header from "../Components/Header";
+import Headers from "./Headers";
 
 const Academics = () => {
   return (
     <>
-      <Header />
+      <Headers />
     </>
   );
 };

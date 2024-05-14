@@ -26,13 +26,13 @@ const Swipe = ({ slides }) => {
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={1}
           breakpoints={{
-            640: {
+            768: {
               slidesPerView: 1,
             },
-            768: {
+            1020: {
               slidesPerView: 2,
             },
-            1024: {
+            1440: {
               slidesPerView: 3,
             },
           }}
