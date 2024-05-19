@@ -7,6 +7,7 @@ import "../../UI/Dashboard/calendar.css";
 
 const Dashboard = () => {
   const [slides, setSlides] = useState([]);
+  const [isHamClicked, setIsHamClicked] = useState(false);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -31,26 +32,32 @@ const Dashboard = () => {
     fetchPosts();
   }, [slides]);
 
+  const handleisHamClicked = () => {
+    console.log("inside dashboard");
+    setIsHamClicked(!isHamClicked);
+    // console.log("after ham is clicked", isHamClicked);
+  };
+
   return (
     <>
-      <DashBoardHeader />
-      <DashboardContainer>
+      <DashBoardHeader handleisHamClicked={handleisHamClicked} />
+      <DashboardContainer isHamClicked={isHamClicked}>
         <div className="grid grid-cols-3 gap-[5vh]">
-          <div className="col-span-2 bg-[#A34463] p-10 rounded-lg shadow-md h-[30vh]">
-            <div className="flex justify-between items-center">
-              <div className="">
-                <span className="text-4xl text-white tracking-wide font-light">
-                  Welcome Admin
-                </span>
-              </div>
-              <div className="flex justify-between items-center">
-                <div className="w-36 h-36 border border-white rounded-lg shadow-md flex flex-col items-center justify-center m-5 p-5">
+          <div className=" col-span-3  xl:col-span-2 bg-gradient-to-r from-[#A34463] to-black p-10 rounded-lg shadow-2xl ">
+            <div className="flex flex-col justify-between items-center xl:flex-row ">
+              {/* <div className=""> */}
+              <span className="text-4xl text-white tracking-wide font-light m-5 text-center md:text-start">
+                Welcome Admin
+              </span>
+              {/* </div> */}
+              <div className="flex justify-between items-center space-x-4">
+                <div className="w-40 h-40 border border-white rounded-lg shadow-md flex flex-col items-center justify-center   p-5">
                   <p className="text-4xl text-white tracking-wide">200</p>
                   <p className="text-2xl text-white tracking-wide">Views</p>
                 </div>
-                <div className="w-36 h-36 border border-white rounded-lg shadow-md flex flex-col items-center justify-center m-5 p-5">
+                <div className="w-40 h-40 border border-white rounded-lg shadow-md flex flex-col items-center justify-center   p-5">
                   <p className="text-4xl text-white tracking-wide">
-                    {slides.length + 1}
+                    {slides.length}
                   </p>
                   <p className="text-2xl text-white tracking-wide">Events</p>
                 </div>
@@ -58,9 +65,9 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="row-span-2 shadow-md rounded-lg h-[85vh]">
-            <div className="w-full">
-              <div className="p-10">
+          <div className="col-span-3  xl:row-span-2 xl:col-span-1 shadow-2xl rounded-lg bg-white">
+            <div className="w-full e">
+              <div className="p-14">
                 <h1 className="text-3xl mb-10 opacity-65 tracking-wide">
                   Upcoming Events:
                 </h1>
@@ -94,7 +101,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 w-full p-10 pt-20 pb-20 bg-white rounded-lg shadow-md h-[50vh]">
+          <div className="col-span-3 xl:col-span-2 w-full p-10 pt-20 pb-20 bg-white rounded-lg shadow-2xl h-[50vh]">
             <Calendar style={{ width: "100%" }} />
           </div>
         </div>
