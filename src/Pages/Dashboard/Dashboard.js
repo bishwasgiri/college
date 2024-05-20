@@ -33,9 +33,7 @@ const Dashboard = () => {
   }, [slides]);
 
   const handleisHamClicked = () => {
-    console.log("inside dashboard");
     setIsHamClicked(!isHamClicked);
-    // console.log("after ham is clicked", isHamClicked);
   };
 
   return (

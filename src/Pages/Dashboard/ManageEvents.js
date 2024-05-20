@@ -4,6 +4,7 @@ import DashBoardHeader from "../../UI/Dashboard/DashBoardHeader";
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Card from "../../UI/Card";
+import DashboardContainer from "../../UI/Dashboard/DashboardContainer";
 
 const ManageEvents = () => {
   const [date, setDate] = useState("");
@@ -12,6 +13,7 @@ const ManageEvents = () => {
   const [posts, setPosts] = useState([]);
   const [message, setMessage] = useState("");
   const [editIsClicked, setEditIsClicked] = useState(false);
+  const [isHamClicked, setIsHamClicked] = useState(false);
   const [id, setId] = useState("");
 
   useEffect(() => {
@@ -177,55 +179,62 @@ const ManageEvents = () => {
     setId(id);
   };
 
+  const handleisHamClicked = () => {
+    setIsHamClicked(!isHamClicked);
+  };
+
   return (
     <>
-      <DashBoardHeader />
-      <div className="ml-[300px] p-3">
-        <h1 className=" text-2xl opacity-65 text-center m-3">Create Events</h1>
+      <DashBoardHeader handleisHamClicked={handleisHamClicked} />
+      <DashboardContainer isHamClicked={isHamClicked}>
+        {/* <h1 className=" text-2xl opacity-65 text-center m-3">Create Events</h1> */}
 
         <div className="grid grid-cols-2 gap-5  p-3">
           <Card>
             <form
-              className="w-3/5 mx-auto mt-10"
+              className="w-4/5 mx-auto mt-10"
               onSubmit={!editIsClicked ? handleCreate : editHandler}
             >
-              <div className="flex flex-col items-start mb-5">
-                <label htmlFor="event" className="mb-2 text-2xl">
+              <div className="flex flex-col items-start mb-5 space-y-5">
+                <h1 className="text-2xl">Create Events</h1>
+                {/* <label htmlFor="event" className="mb-2 text-2xl">
                   Pick a Date:
-                </label>
+                </label> */}
 
                 <input
                   type="date"
                   id="date"
-                  className="outline-none border-2 border-primary p-2 w-full"
+                  className="outline-none border-2 border-primary p-3 w-full"
                   onChange={handleDate}
                   value={date}
                 />
               </div>
               <div className="flex flex-col items-start mb-5">
-                <label htmlFor="event" className="mb-2 text-2xl">
+                {/* <label htmlFor="event" className="mb-2 text-2xl">
                   Event Heading:
-                </label>
+                </label> */}
                 <input
                   type="text"
                   id="event"
-                  className="outline-none border-2 border-primary p-2 w-full"
+                  className="outline-none border-2 border-primary p-3 w-full"
                   onChange={handleHeading}
                   value={heading}
+                  placeholder="event heading"
                 />
               </div>
               <div>
-                <label htmlFor="description" className="mb-2 text-2xl">
+                {/* <label htmlFor="description" className="mb-2 text-2xl">
                   Add Description:
-                </label>
+                </label> */}
                 <textarea
                   name=""
                   id="description"
                   cols="20"
-                  rows="5"
-                  className=" outline-none border-2 border-primary p-2 w-full block"
+                  rows="10"
+                  className=" outline-none border-2 border-primary p-3 w-full block"
                   onChange={handleDescription}
                   value={description}
+                  placeholder="description of events"
                 ></textarea>
               </div>
 
@@ -249,7 +258,7 @@ const ManageEvents = () => {
           </Card>
 
           <Card>
-            <div className="flex flex-col items-start w-full">
+            <div className="flex flex-col items-start w-full space-y-5">
               <h1 className="mt-10 text-2xl p-2 flex flex-col items-start ml-7">
                 Post OverView:
               </h1>
@@ -290,7 +299,7 @@ const ManageEvents = () => {
             </div>
           </Card>
         </div>
-      </div>
+      </DashboardContainer>
     </>
   );
 };

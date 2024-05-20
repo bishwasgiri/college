@@ -4,6 +4,7 @@ import DashBoardHeader from "../../UI/Dashboard/DashBoardHeader";
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Card from "../../UI/Card";
+import DashboardContainer from "../../UI/Dashboard/DashboardContainer";
 
 const ManageNotice = () => {
   const [heading, setHeading] = useState("");
@@ -11,6 +12,7 @@ const ManageNotice = () => {
   const [file, setFile] = useState(null);
   const [notices, setNotices] = useState([]);
   const [editIsClicked, setEditIsClicked] = useState(false);
+  const [isHamClicked, setIsHamClicked] = useState(false);
   const [id, setId] = useState("");
   const [message, setMessage] = useState("");
   const fileInputRef = useRef(null);
@@ -183,35 +185,42 @@ const ManageNotice = () => {
       console.log("the notice response is", json.error);
     }
   };
+
+  const handleisHamClicked = () => {
+    setIsHamClicked(!isHamClicked);
+  };
+
   return (
     <>
-      <DashBoardHeader />
-      <div className="ml-[300px] p-3">
-        <h1 className="flex flex-col items-center text-2xl opacity-65">
+      <DashBoardHeader handleisHamClicked={handleisHamClicked} />
+      <DashboardContainer isHamClicked={isHamClicked}>
+        {/* <h1 className="flex flex-col items-center text-2xl opacity-65">
           Create Notice
-        </h1>
+        </h1> */}
         <div className="grid grid-cols-2  gap-5 p-3">
           <Card>
             <form
               className="w-full"
               onSubmit={!editIsClicked ? handleSumbit : editHandler}
             >
-              <div className="flex flex-col items-start m-2">
-                <label htmlFor="heading" className="mb-2 text-2xl">
+              <div className="flex flex-col items-start m-2 space-y-5">
+                {/* <label htmlFor="heading" className="mb-2 text-2xl">
                   Heading:
-                </label>
+                </label> */}
+                <h1 className="text-2xl">Create Notice</h1>
                 <input
                   type="text"
                   id="heading"
                   className="outline-none  border-2 border-primary w-4/5 p-2"
                   value={heading}
                   onChange={handleHeading}
+                  placeholder="heading"
                 />
               </div>
               <div className="flex flex-col items-start m-2">
-                <label htmlFor="description" className="mb-2 text-2xl">
+                {/* <label htmlFor="description" className="mb-2 text-2xl">
                   Description:
-                </label>
+                </label> */}
 
                 <textarea
                   name=""
@@ -221,10 +230,11 @@ const ManageNotice = () => {
                   className="outline-none border-2 border-primary rounded w-4/5 p-2"
                   onChange={handleDescription}
                   value={description}
+                  placeholder="description"
                 ></textarea>
               </div>
               <div className="flex flex-col items-start m-2">
-                <label htmlFor="notice" className="mb-2 text-2xl">
+                <label htmlFor="notice" className="mb-2 text-xl">
                   Image:
                 </label>
                 <input
@@ -291,7 +301,7 @@ const ManageNotice = () => {
             </div>
           </Card>
         </div>
-      </div>
+      </DashboardContainer>
     </>
   );
 };
